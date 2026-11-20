@@ -31,7 +31,8 @@ local function pool()
     local text = phigrospp.ui.text(canvas, "hit-burst", font, { 0, 0 }, { 0, 0 }, 100, 4, { 0.5, 0.5 }) -- MiddleCenter
     text.fontStyle = 1 -- Bold
     local outline = text.gameObject:AddComponent(UE.UI.Outline)
-    outline.effectColor, outline.effectDistance = { 0, 0, 0, 0.7 }, { 3, -3 }
+    local edge = UE.Screen.height / 700 -- as thick on any screen
+    outline.effectColor, outline.effectDistance = { 0, 0, 0, 0.7 }, { edge, -edge }
     text.gameObject:SetActive(false)
     bursts[i] = { text = text, transform = text.transform, object = text.gameObject }
   end
