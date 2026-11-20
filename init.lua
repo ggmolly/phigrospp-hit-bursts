@@ -99,7 +99,8 @@ end)
 
 on("hit", function(hit)
   if not enabled() or not hit.x or #bursts == 0 then return end
-  local slide = hit.judgement ~= "miss" and not hit.offset
+  -- a drag or a flick only says something when it's missed, unless asked
+  local slide = hit.judgement ~= "miss" and (hit.note == "drag" or hit.note == "flick")
   if hit.judgement == "perfect" and not perfects() or slide and not slides() then return end
   local b = bursts[cursor]
   cursor = cursor % POOL + 1

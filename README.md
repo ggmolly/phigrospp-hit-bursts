@@ -19,7 +19,7 @@ The mod adds a **Hit bursts** tab to the settings. Its last row plays the four b
 | Show hit bursts | Turns them all off without disabling the mod |
 | Style | `Phigros` for the game's words in its colours, `osu!` for 300, 100, 50 and a cross |
 | Show them on perfect hits | Off leaves only what went wrong on screen |
-| Show them on drags and flicks | Off by default, a stream of drags fills the screen with them |
+| Show them on drags and flicks | Off by default, a stream of drags fills the screen with them. A missed one always shows |
 | Size | From half to twice their size |
 
 ## How it works
