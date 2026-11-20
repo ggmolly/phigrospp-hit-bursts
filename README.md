@@ -20,6 +20,8 @@ The mod adds a **Hit bursts** tab to the settings.
 | Show them on drags and flicks | Off by default, a stream of drags fills the screen with 300s |
 | Size | From half to twice their size |
 
+![The kanji style on a row of perfect hits](kanji.png)
+
 ## How it works
 
 Phigros++ tells mods where each hit lands on screen (`hit.x` and `hit.y` in `on("hit")`), so the mod only draws: a pool of texts on a canvas over the game, moved and faded every frame. The animation is the one of osu!'s `LegacyJudgementPieceOld`.
