@@ -9,19 +9,18 @@ local LIFE = FADE_OUT_AT + FADE_OUT
 local POOL = 32 -- texts, reused: nothing is made while a song plays
 local JUDGEMENTS = { "perfect", "good", "bad", "miss" }
 -- what each style writes, how big next to a "300", and its colours: the game's own for its words (the yellow of a
--- perfect, the blue of a good, the red of a bad note), osu!'s for the others
-local OSU = { perfect = { 0.4, 0.8, 1, 1 }, good = { 0.55, 0.9, 0.25, 1 }, bad = { 1, 0.67, 0.2, 1 }, miss = { 1, 0.25, 0.25, 1 } }
+-- perfect, the blue of a good, the red of a bad note), osu!'s for its numbers
 local STYLES = {
   Phigros = { perfect = "Perfect", good = "Good", bad = "Bad", miss = "Miss", scale = 0.8,
     colours = { perfect = { 1, 0.93, 0.63, 1 }, good = { 0.71, 0.88, 1, 1 }, bad = { 1, 0.42, 0.42, 1 }, miss = { 1, 1, 1, 0.7 } } },
-  ["osu!"] = { perfect = "300", good = "100", bad = "50", miss = "×", scale = 1, colours = OSU },
-  kanji = { perfect = "激", good = "喝", bad = "50", miss = "×", scale = 1, colours = OSU },
+  ["osu!"] = { perfect = "300", good = "100", bad = "50", miss = "×", scale = 1,
+    colours = { perfect = { 0.4, 0.8, 1, 1 }, good = { 0.55, 0.9, 0.25, 1 }, bad = { 1, 0.67, 0.2, 1 }, miss = { 1, 0.25, 0.25, 1 } } },
 }
 
 local preview -- the bursts of the settings' preview row, while the settings show it
 
 local enabled = setting("Show hit bursts", true, TAB)
-local style = setting("Style", "Phigros", { "Phigros", "osu!", "kanji" }, TAB)
+local style = setting("Style", "Phigros", { "Phigros", "osu!" }, TAB)
 local perfects = setting("Show them on perfect hits", true, TAB)
 local slides = setting("Show them on drags and flicks", false, TAB)
 local size = setting("Size", 1.0, { 0.5, 2 }, TAB)

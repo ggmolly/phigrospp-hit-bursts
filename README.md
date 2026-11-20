@@ -15,12 +15,10 @@ The mod adds a **Hit bursts** tab to the settings, with a preview of the four bu
 | Setting | |
 |---|---|
 | Show hit bursts | Turns them all off without disabling the mod |
-| Style | `Phigros` for Perfect, Good, Bad and Miss, `osu!` for 300, 100 and 50, `kanji` for 激 on a perfect and 喝 on a good |
+| Style | `Phigros` for Perfect, Good, Bad and Miss, `osu!` for 300, 100 and 50 |
 | Show them on perfect hits | Off leaves only what went wrong on screen |
 | Show them on drags and flicks | Off by default, a stream of drags fills the screen with them |
 | Size | From half to twice their size |
-
-![The kanji style on a row of perfect hits](kanji.png)
 
 ## How it works
 
