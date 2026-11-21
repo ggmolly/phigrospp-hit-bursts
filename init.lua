@@ -92,10 +92,8 @@ on("song", function()
   live = {}
 end)
 
-on("leave", function()
-  for _, b in ipairs(live) do b.object:SetActive(false) end
-  live = {}
-end)
+-- the bursts die with the level's scene, some before this runs
+on("leave", function() live = {} end)
 
 on("hit", function(hit)
   if not enabled() or not hit.x or #bursts == 0 then return end
